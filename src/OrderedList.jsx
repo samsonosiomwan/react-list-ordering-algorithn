@@ -8,7 +8,7 @@ const OrderedList = () => {
     e.preventDefault();
     setItem(e.target.value);
   };
-  const handleDecending = (e) => {
+  const handleSort = (e) => {
     let newArray = [...addItem];
     if (direction === true) {
       setAddItem(newArray.reverse());
@@ -54,7 +54,7 @@ const OrderedList = () => {
         onChange={handleChange}
         onKeyDown={handleKeyDown}
       />
-      <button className="sort-direction" onClick={handleDecending}>
+      <button className="sort-direction" onClick={handleSort}>
         {direction === true ? "⬇️" : "⬆️"}
       </button>
       <button className="clear-list" onClick={handleClear}>
